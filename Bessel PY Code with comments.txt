@@ -1,0 +1,39 @@
+# Bessel.py
+
+# Import necessary modules
+from visual.graph import *
+
+# Define global variables
+Xmax = 40.0
+Xmin = 0.25
+step = 0.1
+order = 10
+start = 50
+
+# Set up the graph display
+graph1 = gdisplay(width=500, height=500, title='Spherical Bessel, L = 1 (red), 10', xtitle='x', ytitle='j(x)',
+                  xmin=Xmin, xmax=Xmax, ymin=-0.2, ymax=0.5)
+
+# Create two graph curves (gcurve) for plotting Bessel functions
+funct1 = gcurve(color=color.red)  # Curve for order 10 (in red)
+funct2 = gcurve(color=color.green)  # Curve for order 1 (in green)
+
+# Define a method to calculate spherical Bessel function values
+def down(x, n, m):
+    j = zeroes((start + 2), float)
+    j[m + 1] = j[m] = 1.  # Initialize with arbitrary values
+    for k in range(m, 0, -1):
+        # Recursively compute Bessel function values
+        j[k - 1] = ((2. * k + 1.) / x) * j[k] - j[k + 1]
+    scale = (sin(x) / x) / j[0]  # Scale solution to known j[0]
+    return j[n] * scale
+
+# Loop for plotting the first Bessel function (order 10)
+for x in arrange(Xmin, Xmax, step):
+    # Plot points on the curve for order 10
+    funct1.plot(pos=(x, down(x, order, start)))
+
+# Loop for plotting the second Bessel function (order 1)
+for x in arrange(Xmin, Xmax, step):
+    # Plot points on the curve for order 1
+    funct2.plot(pos=(x, down(x, 1, start)))

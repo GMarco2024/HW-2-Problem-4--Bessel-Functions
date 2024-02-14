@@ -1,0 +1,74 @@
+
+Equation (2.19)
+
+\[ x^2f''(x) + 2xf'(x) + [x^2 - l(l+1)]f(x) = 0 \]
+
+Bessel Function of the first kind
+
+\[ j_l(x) = \sqrt{\frac{\pi}{2x}} J_{l+\frac{1}{2}}(x) \]
+
+Equation (2.20)
+
+\[ e^{ikr} = \sum_{l=0}^{\infty} i^l (2l+1) j_l(kr) P_l(\cos(\theta)) \]
+
+Equation (2.21) (Spherical Bessel)
+
+\[ j_0(x) = \frac{\sin(x)}{x} \], \[ j_1(x) = \frac{\sin(x)}{x^2} - \frac{\cos(x)}{x} \]
+
+Equation (2.22)
+
+\[ n_0(x) = \frac{-\cos(x)}{x} \]. \[ n_1(x) = \frac{-\cos(x)}{x^2} - \frac{\sin(x)}{x} \].
+
+Equation (2.23) (Up)
+
+\[ j_{l+1}(x) = \frac{2l+1}{x} j_l(x) - j_{l-1}(x) \]
+
+Equation (2.24) (Down)
+
+\[ j_{l-1}(x) = \frac{2l+1}{x} j_l(x) - j_{l+1}(x) \]
+
+Equation (2.25)
+
+\[ j_1^{(c)}(x) = j_1(x) + \epsilon n_l(x) \]
+
+Equation (2.26)
+
+\[ j_1^{\text{normalized}}(x) = j_l^{\text{compute}}(x) \cdot \frac{j_0^{\text{analytic}}(x)}{j_0^{\text{compute}}(x)} \]
+
+
+Table 2.1 in (Data Form)
+
+For x = 0.1 then,
+j_3(x) = +9.518519719x10^-6,
+j_5(x) = +9.616310231x10^-10,
+j_8(x) =  +2.901200102x10^-16
+
+For x = 1 then,
+j_3(x) = +9.006581118x10^−3
+j_5(x) = +9.256115862x10^−5
+j_8(x) =  +2.826498802x10^-8
+
+For x = 10 then,
+j_3(x) = −3.949584498x10^−2
+j_5(x) = −5.553451162x10^−2
+j_8(x) =  +1.255780236x10^−1
+
+Table 2.1 (In Latex Form)
+
+\[
+\begin{array}{|c|c|c|c|}
+\hline
+x & j_3(x) & j_5(x) & j_8(x) \\
+\hline
+0.1 & 9.518519719 \times 10^{-6} & 9.616310231 \times 10^{-10} & 2.901200102 \times 10^{-16} \\
+\hline
+1 & 9.006581118 \times 10^{-3} & 9.256115862 \times 10^{-5} & 2.826498802 \times 10^{-8} \\
+\hline
+10 & -3.949584498 \times 10^{-2} & -5.553451162 \times 10^{-2} & 1.255780236 \times 10^{-1} \\
+\hline
+\end{array}
+\]
+
+
+
+
