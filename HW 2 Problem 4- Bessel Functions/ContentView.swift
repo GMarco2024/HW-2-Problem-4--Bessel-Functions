@@ -45,7 +45,7 @@ struct ContentView: View {
         let downwardResults = calculateDownwardRecursion(x: x, lMax: 25)
         
         // Calculate relative error
-        let relativeErrors = calculateRelativeError(upwardVals: upwardResults, downwardVals: downwardResults)
+        let relativeErrors = calculateRelativeError(upwardValues: upwardResults, downwardValues: downwardResults)
         
         // Combine and format the results
         for l in 0..<upwardResults.count {

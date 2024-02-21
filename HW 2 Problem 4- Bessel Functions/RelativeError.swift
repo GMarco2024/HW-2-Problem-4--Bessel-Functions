@@ -7,10 +7,14 @@
 
 import Foundation
 
-func calculateRelativeError(upwardVals: [Double], downwardVals: [Double]) -> [Double] {
+//                           |up  -  down|
+//      Relative Error  =  -----------------
+//                          |up|  +  |down|
+
+func calculateRelativeError(upwardValues: [Double], downwardValues: [Double]) -> [Double] {
     var relativeErrors = [Double]()
     
-    for (up, down) in zip(upwardVals, downwardVals) {
+    for (up, down) in zip(upwardValues, downwardValues) {
         let error = abs(up - down) / (abs(up) + abs(down))
         relativeErrors.append(error)
     }
