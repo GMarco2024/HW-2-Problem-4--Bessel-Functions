@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ED69D5582B864AFD00DCFED1 /* UpwardRecursion.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED69D5572B864AFD00DCFED1 /* UpwardRecursion.swift */; };
+		ED69D55A2B864B1700DCFED1 /* DownwardRecursion.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED69D5592B864B1700DCFED1 /* DownwardRecursion.swift */; };
 		ED6C8C822B7C2FC800775B83 /* HW_2_Problem_4__Bessel_FunctionsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6C8C812B7C2FC800775B83 /* HW_2_Problem_4__Bessel_FunctionsApp.swift */; };
 		ED6C8C842B7C2FC800775B83 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6C8C832B7C2FC800775B83 /* ContentView.swift */; };
 		ED6C8C862B7C2FCA00775B83 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED6C8C852B7C2FCA00775B83 /* Assets.xcassets */; };
@@ -14,7 +16,6 @@
 		ED6C8C942B7C2FCA00775B83 /* HW_2_Problem_4__Bessel_FunctionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6C8C932B7C2FCA00775B83 /* HW_2_Problem_4__Bessel_FunctionsTests.swift */; };
 		ED6C8C9E2B7C2FCA00775B83 /* HW_2_Problem_4__Bessel_FunctionsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6C8C9D2B7C2FCA00775B83 /* HW_2_Problem_4__Bessel_FunctionsUITests.swift */; };
 		ED6C8CA02B7C2FCA00775B83 /* HW_2_Problem_4__Bessel_FunctionsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6C8C9F2B7C2FCA00775B83 /* HW_2_Problem_4__Bessel_FunctionsUITestsLaunchTests.swift */; };
-		EDA34B002B85757800689D1C /* Problem4a.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA34AFF2B85757800689D1C /* Problem4a.swift */; };
 		EDA4733C2B859CD4002FCB45 /* RelativeError.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA4733B2B859CD4002FCB45 /* RelativeError.swift */; };
 /* End PBXBuildFile section */
 
@@ -36,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		ED69D5572B864AFD00DCFED1 /* UpwardRecursion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpwardRecursion.swift; sourceTree = "<group>"; };
+		ED69D5592B864B1700DCFED1 /* DownwardRecursion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownwardRecursion.swift; sourceTree = "<group>"; };
 		ED6C8C7E2B7C2FC800775B83 /* HW 2 Problem 4- Bessel Functions.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HW 2 Problem 4- Bessel Functions.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED6C8C812B7C2FC800775B83 /* HW_2_Problem_4__Bessel_FunctionsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HW_2_Problem_4__Bessel_FunctionsApp.swift; sourceTree = "<group>"; };
 		ED6C8C832B7C2FC800775B83 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -47,7 +50,6 @@
 		ED6C8C992B7C2FCA00775B83 /* HW 2 Problem 4- Bessel FunctionsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "HW 2 Problem 4- Bessel FunctionsUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED6C8C9D2B7C2FCA00775B83 /* HW_2_Problem_4__Bessel_FunctionsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HW_2_Problem_4__Bessel_FunctionsUITests.swift; sourceTree = "<group>"; };
 		ED6C8C9F2B7C2FCA00775B83 /* HW_2_Problem_4__Bessel_FunctionsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HW_2_Problem_4__Bessel_FunctionsUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		EDA34AFF2B85757800689D1C /* Problem4a.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Problem4a.swift; sourceTree = "<group>"; };
 		EDA4733B2B859CD4002FCB45 /* RelativeError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelativeError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -101,7 +103,8 @@
 			children = (
 				ED6C8C812B7C2FC800775B83 /* HW_2_Problem_4__Bessel_FunctionsApp.swift */,
 				ED6C8C832B7C2FC800775B83 /* ContentView.swift */,
-				EDA34AFF2B85757800689D1C /* Problem4a.swift */,
+				ED69D5572B864AFD00DCFED1 /* UpwardRecursion.swift */,
+				ED69D5592B864B1700DCFED1 /* DownwardRecursion.swift */,
 				EDA4733B2B859CD4002FCB45 /* RelativeError.swift */,
 				ED6C8C852B7C2FCA00775B83 /* Assets.xcassets */,
 				ED6C8C872B7C2FCA00775B83 /* HW_2_Problem_4__Bessel_Functions.entitlements */,
@@ -266,8 +269,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				EDA4733C2B859CD4002FCB45 /* RelativeError.swift in Sources */,
-				EDA34B002B85757800689D1C /* Problem4a.swift in Sources */,
+				ED69D5582B864AFD00DCFED1 /* UpwardRecursion.swift in Sources */,
 				ED6C8C842B7C2FC800775B83 /* ContentView.swift in Sources */,
+				ED69D55A2B864B1700DCFED1 /* DownwardRecursion.swift in Sources */,
 				ED6C8C822B7C2FC800775B83 /* HW_2_Problem_4__Bessel_FunctionsApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
