@@ -9,8 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var N1: String = ""
-    @State private var resultsUpward: [String] = []
-    @State private var resultsDownward: [String] = []
+    @State private var results: [String] = [] // Combined results
 
     var body: some View {
         ScrollView {
@@ -37,37 +36,28 @@ struct ContentView: View {
                 }
                 .padding(.bottom, 20)
                 
-                Text("Upward Recursion Results:")
-                    .font(.headline)
-                ForEach(resultsUpward, id: \.self) { result in
-                    Text(result)
-                }
-                
-                Text("Downward Recursion Results:")
-                    .font(.headline)
-                ForEach(resultsDownward, id: \.self) { result in
+                ForEach(results, id: \.self) { result in
                     Text(result)
                 }
             }
         }
-        
+        .padding()
     }
 
     func calculateBesselFunctions(x: Double) {
-        // Clear previous results
-        resultsUpward.removeAll()
-        resultsDownward.removeAll()
+        // Clear previous combined results
+        results.removeAll()
         
-        // Calculate using upward recursion
+        // Calculate using upward and downward recursion
         let upwardResults = calculateUpwardRecursion(x: x, lMax: 25)
-        for l in 0..<upwardResults.count {
-            resultsUpward.append("j_\(l)(\(x)) = \(upwardResults[l])")
-        }
-        
-        // Calculate using downward recursion
         let downwardResults = calculateDownwardRecursion(x: x, lMax: 25)
-        for l in 0..<downwardResults.count {
-            resultsDownward.append("j_\(l)(\(x)) = \(downwardResults[l])")
+        
+        // Combine and format the results
+        for l in 0..<upwardResults.count {
+        
+        let resultString = "x = \(x), l = \(l), Downward: \(downwardResults[l]), Upward: \(upwardResults[l])"
+            
+            results.append(resultString)
         }
     }
 }
