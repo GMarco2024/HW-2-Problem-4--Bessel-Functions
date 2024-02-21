@@ -7,9 +7,9 @@
 
 import Foundation
 
-//                     2l + 1
-//[    j(x)  =        ------ j (x)    -  j        (x) ]
-//     l - 1             x    l            l + 1
+//                 2l + 1
+//[    j(x)  =    ----------   j (x)    -  j        (x) ]
+//     l - 1          x          l            l + 1
 
 
 func calculateDownwardRecursion(x: Double, lMax: Int) -> [Double] {
