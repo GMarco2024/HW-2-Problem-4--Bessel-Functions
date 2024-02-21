@@ -29,12 +29,6 @@ func calculateUpwardRecursion(x: Double, lMax: Int) -> [Double] {
     return results
 }
 
-/// Calculates the spherical Bessel function of the first kind using downward recursion.
-/// - Parameters:
-///   - x: The value of x.
-///   - lMax: The maximum order of the Bessel function for starting the recursion.
-/// - Returns: An array containing the values of j_l(x) for l = 0 to lMax.
-/// Note: Downward recursion may suffer from numerical instability for large lMax.
 func calculateDownwardRecursion(x: Double, lMax: Int) -> [Double] {
     var results = [Double](repeating: 0.0, count: lMax + 2) // Extra space for initial guess
     

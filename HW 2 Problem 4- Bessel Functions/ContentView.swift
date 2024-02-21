@@ -1,24 +1,17 @@
-//
-//  ContentView.swift
-//  HW2 Problem 3 - Bessel Function
-//
-//  Modified by Marco Gonzalez 2/20/24
-//
-
 import SwiftUI
 
 struct ContentView: View {
     @State private var N1: String = ""
-    @State private var results: [String] = [] // Combined results
+    @State private var results: [String] = []
 
     var body: some View {
         ScrollView {
-            VStack(alignment: .leading) {
+            VStack {
                 Text("Problem 4a - Upward and Downward Recursion")
                     .font(.title)
                     .underline()
                 
-                Text("Calculate j_l(x) for the first 25 (l) values for (x) = N")
+                Text("Calculate j_l(x) for the first 25 l values for x = N")
                     .font(.headline)
                     .fontWeight(.regular)
                     .italic()
@@ -45,18 +38,19 @@ struct ContentView: View {
     }
 
     func calculateBesselFunctions(x: Double) {
-        // Clear previous combined results
+        // This clears calculated results.
         results.removeAll()
         
         // Calculate using upward and downward recursion
         let upwardResults = calculateUpwardRecursion(x: x, lMax: 25)
         let downwardResults = calculateDownwardRecursion(x: x, lMax: 25)
         
+        // Calculate relative error
+        let relativeErrors = calculateRelativeError(upwardVals: upwardResults, downwardVals: downwardResults)
+        
         // Combine and format the results
         for l in 0..<upwardResults.count {
-        
-        let resultString = "x = \(x), l = \(l), Downward: \(downwardResults[l]), Upward: \(upwardResults[l])"
-            
+            let resultString = "l = \(l), x = \(x), Downward: \(String(format: "%7.5e", downwardResults[l])), Upward: \(String(format: "%7.5e", upwardResults[l])), Relative Error: \(String(format: "%7.5e", relativeErrors[l]))"
             results.append(resultString)
         }
     }
