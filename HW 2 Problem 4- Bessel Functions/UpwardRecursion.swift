@@ -7,6 +7,11 @@
 
 import Foundation
 
+
+//                     2l + 1
+//[    j(x)  =        ------ j (x)    -  j        (x) ]
+//     l + 1             x    l            l - 1
+                           
 func calculateUpwardRecursion(x: Double, lMax: Int) -> [Double] {
     var results = [Double](repeating: 0.0, count: lMax + 1)
     

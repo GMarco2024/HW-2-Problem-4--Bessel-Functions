@@ -7,8 +7,13 @@
 
 import Foundation
 
+//                     2l + 1
+//[    j(x)  =        ------ j (x)    -  j        (x) ]
+//     l - 1             x    l            l + 1
+
+
 func calculateDownwardRecursion(x: Double, lMax: Int) -> [Double] {
-    var results = [Double](repeating: 0.0, count: lMax + 2) // Extra space for initial guess
+    var results = [Double](repeating: 0.0, count: lMax + 2)
     
     // Initial guess for starting the recursion
     results[lMax + 1] = 0.0
@@ -17,8 +22,7 @@ func calculateDownwardRecursion(x: Double, lMax: Int) -> [Double] {
     for l in (0..<lMax).reversed() {
         results[l] = ((2.0 * Double(l) + 1.0) / x) * results[l + 1] - results[l + 2]
     }
-    
-    // Normalization with j0(x) since downward recursion does not guarantee correct magnitude
+
     let scale = sin(x) / x / results[0]
     for l in 0...lMax {
         results[l] *= scale

@@ -22,7 +22,6 @@ struct ContentView: View {
                     .padding(.bottom, 20)
 
                 Button("Calculate") {
-                    // Ensure the input can be converted to a Double
                     if let xValue = Double(N1) {
                         calculateBesselFunctions(x: xValue)
                     }
